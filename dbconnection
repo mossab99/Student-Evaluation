@@ -1,0 +1,30 @@
+<?php
+
+function db_connect ()
+		{
+			
+			$dbhost = "localhost";
+			$dbname	= "evaluations"; // change this to be the name of your database
+			$dbuser	= "wordpress"; // change this to be your DB username
+			$dbpass	= "Kareem@0790328001"; //change this to be your password
+
+				try
+				{
+					$conn = new PDO("mysql:host=$dbhost;dbname=$dbname",$dbuser,$dbpass);
+					echo "Database connection is ok ";
+
+
+				}
+				catch(PDOException $err)
+				{
+					echo "Database connection problem. ". $err->getMessage();
+					exit();
+				}
+		
+		}
+		
+function hello ()
+{
+	echo 'hello mossab'; 
+}
+?>
